@@ -27,7 +27,7 @@ class m160726_111055_item_materials extends Migration
 
     public function safeDown()
     {
-        $this->dropForeignKey('fk_item_material_id', 'points');
+        $this->dropForeignKey('fk_point_material_id', 'points');
         $this->dropColumn('points', 'ref_point_material_id');
         $this->dropTable('point_materials');
     }

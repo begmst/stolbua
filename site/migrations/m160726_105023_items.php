@@ -13,6 +13,10 @@ class m160726_105023_items extends Migration
             'title'         => $this->string(255)->notNull(),
             'latitute'      => $this->decimal(10, 6)->notNull(),
             'longitute'     => $this->decimal(10, 6)->notNull(),
+            'city'          => $this->string(255)->notNull(),
+            'street'        => $this->string(255)->notNull(),
+            'house_no'      => $this->integer()->unsigned(),
+            'address'       => $this->string(255)->notNull(),
             'added_date'    => $this->dateTime()->notNull()->defaultValue(new Expression('NOW()')),
         ]);
 
