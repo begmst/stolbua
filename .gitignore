@@ -1,7 +1,6 @@
 site/assets/*
 !site/assets/.gitignore
-site/protected/runtime/*
-!site/protected/runtime/.gitignore
-site/protected/data/*.db
-site/themes/classic/views/
+site/runtime/*
+!site/runtime/.gitignore
+#site/protected/data/*.sql
 .idea/
