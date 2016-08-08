@@ -88,6 +88,7 @@ class UsersController extends DefaultController
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+            $model->password = '';
             return $this->render('update', [
                 'model' => $model,
             ]);
@@ -116,7 +117,7 @@ class UsersController extends DefaultController
      */
     protected function findModel($id)
     {
-        if (($model = Users::findOne($id)) !== null) {
+        if (($model = UsersModel::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
